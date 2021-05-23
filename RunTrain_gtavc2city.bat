@@ -1,0 +1,1 @@
+python train.py --dataroot ./datasets/gtavc2city --name gtavc2city --model cycle_gan --batch_size 4 --save_latest_freq 400 --no_html --checkpoints_dir ./checks --save_epoch_freq 2 --gpu_ids 0

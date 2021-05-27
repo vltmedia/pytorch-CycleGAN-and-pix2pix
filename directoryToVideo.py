@@ -23,6 +23,7 @@ print('-------------------------------------------------------------------------
 
 
 img_array = []
+size = (0,0)
 for filename in glob.glob(sys.argv[1]+'*.' +sys.argv[3]):
     img = cv2.imread(filename)
     height, width, layers = img.shape

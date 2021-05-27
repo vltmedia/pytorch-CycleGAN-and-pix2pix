@@ -9,7 +9,7 @@ Train a GAN against anything, this repo and Google Colab Noteboook will allow yo
 
 Use the [Google Colab Notebook](https://github.com/vltmedia/pytorch-CycleGAN-and-pix2pix/blob/master/CycleGAN_gtavc2city.ipynb) for testing and remote dev.
 
-Footage was sourced from Pexels.com & [https://www.youtube.com/watch?v=N9YvopAJEgo](This Video from GTA Series Videos on Youtube)
+Footage was sourced from Pexels.com & [This Video from GTA Series Videos on Youtube](https://www.youtube.com/watch?v=N9YvopAJEgo)
 
 ## Problems:
 

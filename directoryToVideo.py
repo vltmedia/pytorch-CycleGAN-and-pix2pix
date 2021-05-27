@@ -11,13 +11,13 @@ import sys
 
 print('----------------------------------------------------------------------------------')
 print('----------------------------------------------------------------------------------')
-
+print('Search : ',sys.argv[1]+'/*.' +sys.argv[3])
 print('Directory to search : ',sys.argv[1] )
 print('Output filename : ',sys.argv[2] )
 print('Extensions to use for found images : ',sys.argv[3] )
 print('FPS : ',sys.argv[4] )
 print('Codec : ',sys.argv[5] )
-print('Files Found : ',glob.glob(sys.argv[1]+'*.' +sys.argv[3]))
+print('Files Found : ',glob.glob(sys.argv[1]+'/*.' +sys.argv[3]))
 print('----------------------------------------------------------------------------------')
 print('----------------------------------------------------------------------------------')
 
@@ -25,11 +25,13 @@ print('-------------------------------------------------------------------------
 
 img_array = []
 size = (0,0)
-for filename in glob.glob(sys.argv[1]+'*.' +sys.argv[3]):
-    img = cv2.imread(filename)
-    height, width, layers = img.shape
-    size = (width,height)
-    img_array.append(img)
+for filename in sorted(glob.glob(sys.argv[1]+'/*.' +sys.argv[3])):
+    if "_real" not in filename:
+
+      img = cv2.imread(filename)
+      height, width, layers = img.shape
+      size = (width,height)
+      img_array.append(img)
 out = cv2.VideoWriter(sys.argv[2],cv2.VideoWriter_fourcc(*'MJPG'), int(sys.argv[4]), size)
 
 # if sys.argv[5] == "X264":

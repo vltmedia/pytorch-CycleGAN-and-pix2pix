@@ -28,10 +28,10 @@ size = (0,0)
 for filename in sorted(glob.glob(sys.argv[1]+'/*.' +sys.argv[3])):
     if "_real" not in filename:
 
-      img = cv2.imread(filename)
-      height, width, layers = img.shape
-      size = (width,height)
-      img_array.append(img)
+        img = cv2.imread(filename)
+        height, width, layers = img.shape
+        size = (width,height)
+        img_array.append(img)
 out = cv2.VideoWriter(sys.argv[2],cv2.VideoWriter_fourcc(*'MJPG'), int(sys.argv[4]), size)
 
 # if sys.argv[5] == "X264":

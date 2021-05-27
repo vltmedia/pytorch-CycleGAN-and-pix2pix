@@ -17,6 +17,7 @@ print('Output filename : ',sys.argv[2] )
 print('Extensions to use for found images : ',sys.argv[3] )
 print('FPS : ',sys.argv[4] )
 print('Codec : ',sys.argv[5] )
+print('Files Found : ',glob.glob(sys.argv[1]+'*.' +sys.argv[3]))
 print('----------------------------------------------------------------------------------')
 print('----------------------------------------------------------------------------------')
 

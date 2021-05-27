@@ -30,7 +30,7 @@ for filename in glob.glob(sys.argv[1]+'*.' +sys.argv[3]):
     height, width, layers = img.shape
     size = (width,height)
     img_array.append(img)
-out = cv2.VideoWriter(sys.argv[2],cv2.VideoWriter_fourcc(*sys.argv[5]), int(sys.argv[4]), size)
+out = cv2.VideoWriter(sys.argv[2],cv2.VideoWriter_fourcc(*'MJPG'), int(sys.argv[4]), size)
 
 # if sys.argv[5] == "X264":
 #     out = cv2.VideoWriter(sys.argv[2],cv2.VideoWriter_fourcc(*sys.argv[5]), int(sys.argv[4]), size)

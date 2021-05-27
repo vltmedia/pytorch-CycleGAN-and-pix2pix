@@ -2,8 +2,14 @@
 
 Train a GAN against anything, this repo and Google Colab Noteboook will allow you to :
 - Train a GAN against 2 data sets
+
 - Save the checkpoints to your Google Drive just incase of Google Colab Timeout
+
 - Process the Test (faked) images into .avi and .mp4 (h264) files.
+
+Use the [Google Colab Notebook](https://github.com/vltmedia/pytorch-CycleGAN-and-pix2pix/blob/master/CycleGAN_gtavc2city.ipynb) for testing and remote dev.
+
+  
 
 ## Problems:
 
@@ -12,12 +18,15 @@ Train a GAN against anything, this repo and Google Colab Noteboook will allow yo
 
 ## Current Test Previews
 ### 310 Epochs
-- [![310 Epochs Sizzle](https://www.dropbox.com/s/zdfapnij53z3tt7/52721-320-GTAVC-Sizzle_fake.gif?raw=1)](https://www.dropbox.com/s/3t6ndny7i6tydx6/52721-320-GTAVC-Sizzle_fake.mp4?raw=1)
-	- <u>52721 310 Epochs Sizzle</u>
-- [![52721 310 epochs GTAVC-Heli_fake](https://www.dropbox.com/s/bnqzpyfnsuzchr4/52721-320-GTAVC-Heli_fake_pip.gif?raw=1)](https://www.dropbox.com/s/mym2clufxvtbjfy/52721-320-GTAVC-Heli_fake.mp4?raw=1)
-	- <u>52721 310 epochs GTAVC-Heli_fake</u>
-- [![52721 310 epochs Bridge Traveling_fake](https://www.dropbox.com/s/nqajb3ebmn4bghh/52721-320-GTAVC-BridgeTraveling_fake_pip.gif?raw=1)](https://www.dropbox.com/s/oxtdmqij2joqx68/52721-320-GTAVC-BridgeTraveling_fake.mp4?raw=1)
-	- <u>52721 310 epochs Bridge Traveling_fake</u>
+- ![310 Epochs Sizzle](https://www.dropbox.com/s/zdfapnij53z3tt7/52721-320-GTAVC-Sizzle_fake.gif?raw=1)
+	- [52721 310 Epochs Sizzle](https://www.dropbox.com/s/3t6ndny7i6tydx6/52721-320-GTAVC-Sizzle_fake.mp4?raw=1)
+
+- ![52721 310 epochs GTAVC-Heli_fake](https://www.dropbox.com/s/bnqzpyfnsuzchr4/52721-320-GTAVC-Heli_fake_pip.gif?raw=1)
+	- [52721 310 epochs GTAVC-Heli_fake](https://www.dropbox.com/s/mym2clufxvtbjfy/52721-320-GTAVC-Heli_fake.mp4?raw=1)
+
+- ![52721 310 epochs Bridge Traveling_fake](https://www.dropbox.com/s/nqajb3ebmn4bghh/52721-320-GTAVC-BridgeTraveling_fake_pip.gif?raw=1)
+	- [52721 310 epochs Bridge Traveling_fake](https://www.dropbox.com/s/oxtdmqij2joqx68/52721-320-GTAVC-BridgeTraveling_fake.mp4?raw=1)
+
 
 
 # Original Repo: CycleGAN and pix2pix in PyTorch

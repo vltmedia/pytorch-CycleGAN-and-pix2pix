@@ -16,6 +16,7 @@ class TestOptions(BaseOptions):
         parser.add_argument('--eval', action='store_true', help='use eval mode during test time.')
         parser.add_argument('--num_test', type=int, default=50, help='how many test images to run')
         parser.add_argument('--test_all', action='store_true', help='test ALL the files')
+        parser.add_argument('--only_fake', action='store_true', help='only export fake imagse')
 
         # rewrite devalue values
         parser.set_defaults(model='test')

@@ -3,7 +3,7 @@
                batch_size: 1                             
           checkpoints_dir: ./checks                      	[default: ./checkpoints]
                 crop_size: 256                           
-                 dataroot: ./datasets/gtavc2city/GTAVC-BridgeTraveling_test	[default: None]
+                 dataroot: ./datasets/gtavc2city/testA   	[default: None]
              dataset_mode: single                        
                 direction: AtoB                          
           display_winsize: 256                           

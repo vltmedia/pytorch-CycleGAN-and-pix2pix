@@ -15,7 +15,7 @@
            display_server: http://localhost              
           display_winsize: 256                           
                     epoch: latest                        
-              epoch_count: 251                           	[default: 1]
+              epoch_count: 91                            	[default: 1]
                  gan_mode: lsgan                         
                   gpu_ids: 0                             
                 init_gain: 0.02                          
@@ -32,8 +32,8 @@
                 lr_policy: linear                        
          max_dataset_size: inf                           
                     model: cycle_gan                     
-                 n_epochs: 300                           	[default: 100]
-           n_epochs_decay: 300                           	[default: 100]
+                 n_epochs: 100                           
+           n_epochs_decay: 100                           
                n_layers_D: 3                             
                      name: gtavc2city                    	[default: experiment_name]
                       ndf: 64                            

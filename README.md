@@ -23,7 +23,7 @@ Use the [Google Colab Notebook](https://github.com/vltmedia/pytorch-CycleGAN-and
 
 [52721 310 Epochs Sizzle](https://www.dropbox.com/s/3t6ndny7i6tydx6/52721-320-GTAVC-Sizzle_fake.mp4?raw=1)
 
-<img src='imgs/52721-320-GTAVC-Heli_fake_pip.gif1' align="center" width=360>
+<img src='imgs/52721-320-GTAVC-Heli_fake_pip.gif' align="center" width=360>
 
 [52721 310 epochs GTAVC-Heli_fake](https://www.dropbox.com/s/mym2clufxvtbjfy/52721-320-GTAVC-Heli_fake.mp4?raw=1)
 

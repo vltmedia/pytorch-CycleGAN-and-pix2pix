@@ -19,13 +19,15 @@ Use the [Google Colab Notebook](https://github.com/vltmedia/pytorch-CycleGAN-and
 ## Current Test Previews
 ### 310 Epochs
 
-<img src='https://www.dropbox.com/s/zdfapnij53z3tt7/52721-320-GTAVC-Sizzle_fake.gif?raw=1' align="right" width=384>
+<img src='imgs/52721-320-GTAVC-Sizzle_fake.gif' align="center" width=360>
+
 [52721 310 Epochs Sizzle](https://www.dropbox.com/s/3t6ndny7i6tydx6/52721-320-GTAVC-Sizzle_fake.mp4?raw=1)
 
-<img src='https://www.dropbox.com/s/bnqzpyfnsuzchr4/52721-320-GTAVC-Heli_fake_pip.gif?raw=1' align="right" width=384>
+<img src='imgs/52721-320-GTAVC-Heli_fake_pip.gif1' align="center" width=360>
+
 [52721 310 epochs GTAVC-Heli_fake](https://www.dropbox.com/s/mym2clufxvtbjfy/52721-320-GTAVC-Heli_fake.mp4?raw=1)
 
-<img src='https://www.dropbox.com/s/nqajb3ebmn4bghh/52721-320-GTAVC-BridgeTraveling_fake_pip.gif?raw=1' align="right" width=384>
+<img src='imgs/52721-320-GTAVC-BridgeTraveling_fake_pip.gif' align="center" width=360>
 
 [52721 310 epochs Bridge Traveling_fake](https://www.dropbox.com/s/oxtdmqij2joqx68/52721-320-GTAVC-BridgeTraveling_fake.mp4?raw=1)
 

@@ -29,9 +29,13 @@ for filename in glob.glob(sys.argv[1]+'*.' +sys.argv[3]):
     height, width, layers = img.shape
     size = (width,height)
     img_array.append(img)
+out = cv2.VideoWriter(sys.argv[2],cv2.VideoWriter_fourcc(*'X264'), sys.argv[4], size)
+
+if sys.argv[5] == "X264":
+    out = cv2.VideoWriter(sys.argv[2],cv2.VideoWriter_fourcc(*sys.argv[5]), sys.argv[4], size)
  
- 
-out = cv2.VideoWriter(sys.argv[2],cv2.VideoWriter_fourcc(*sys.argv[5]), sys.argv[4], size)
+if sys.argv[5] == "XVID":
+    out = cv2.VideoWriter(sys.argv[2],cv2.VideoWriter_fourcc(*'XVID'), sys.argv[4], size)
  
 for i in range(len(img_array)):
     out.write(img_array[i])

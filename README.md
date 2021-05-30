@@ -33,6 +33,65 @@ Footage was sourced from Pexels.com & [This Video from GTA Series Videos on Yout
 
 
 
+# Third Party Apps
+
+- [ytdl-org/youtube-dl: Command-line program to download videos from YouTube.com and other video sites (github.com)](https://github.com/ytdl-org/youtube-dl)
+- [vltmedia/FrameClipper: Clip frames from videos for use in compositing, editing, datasets and other needs. (github.com)](https://github.com/vltmedia/FrameClipper)
+
+# Youtube Download Template
+
+[ytdl-org/youtube-dl: Command-line program to download videos from YouTube.com and other video sites (github.com)](https://github.com/ytdl-org/youtube-dl)
+
+```
+youtube-dl -o output.mkv -f bestvideo https://www.youtube.com/watch?v=XvmlRX9XVCo
+```
+# Sources
+
+- https://www.youtube.com/watch?v=XvmlRX9XVCo
+  - Kalucci
+```
+    youtube-dl -o DrivingTour-MiamiBeach.mkv -f bestvideo https://www.youtube.com/watch?v=XvmlRX9XVCo
+```
+
+- https://www.youtube.com/watch?v=sU_4nLQzhn4
+  - Kalucci
+
+```
+    youtube-dl -o WalkingTour-MiamiBeach-SouthBeach.mkv -f bestvideo https://www.youtube.com/watch?v=sU_4nLQzhn4
+```
+### DrivingTour-MiamiBeach
+
+```
+python FrameClipper_app.py --dataroot "/home/vltmedia/GTAGAN/Vids/DrivingTour-MiamiBeach.mkv" --output "/home/vltmedia/GTAGAN/dataset/DrivingTour-MiamiBeach"  --processType crop --extension mp4 --shotcount 24 --frameStart 2200 --randomClip --dimensionx 1280 --dimensiony 720 --cropx 500 --cropy 500 --randomCrop 
+```
+
+```
+python FrameClipper_app.py --dataroot "/home/vltmedia/GTAGAN/dataset/DrivingTour-MiamiBeach" --output "/home/vltmedia/GTAGAN/dataset/DrivingTour-MiamiBeach_1k" --processType zip --extension png  --shotcount 1000
+```
+
+### DrivingTour-MiamiBeach
+
+```
+python FrameClipper_app.py --dataroot "/home/vltmedia/GTAGAN/Vids/WalkingTour-MiamiBeach-SouthBeach.mkv" --output "/home/vltmedia/GTAGAN/dataset/WalkingTour-MiamiBeach-SouthBeach"  --processType crop --extension mp4 --shotcount 500 --frameStart 2200 --frameEnd 97741 --randomClip --dimensionx 1280 --dimensiony 720 --cropx 500 --cropy 500 --randomCrop 
+```
+
+```
+python FrameClipper_app.py --dataroot "/home/vltmedia/GTAGAN/dataset/WalkingTour-MiamiBeach-SouthBeach" --output "/home/vltmedia/GTAGAN/dataset/WalkingTour-MiamiBeach-SouthBeach_1k" --processType zip --extension png  --shotcount 1000
+```
+
+
+### DrivingTour-MiamiBeach
+```
+python FrameClipper_app.py --dataroot "/home/vltmedia/GTAGAN/Vids/MiamiViceCityDrivingDowntown.mkv" --output "/home/vltmedia/GTAGAN/dataset/MiamiViceCityDrivingDowntown"  --processType crop --extension mp4 --shotcount 200 --frameStart 2200 --randomClip --dimensionx 1280 --dimensiony 720 --cropx 500 --cropy 500 --randomCrop 
+```
+
+```
+python FrameClipper_app.py --dataroot "/home/vltmedia/GTAGAN/dataset/WalkingTour-MiamiBeach-SouthBeach" --output "/home/vltmedia/GTAGAN/dataset/WalkingTour-MiamiBeach-SouthBeach_1k" --processType zip --extension png  --shotcount 1000
+```
+
+
+
+
 # Original Repo: CycleGAN and pix2pix in PyTorch
 
 <img src='imgs/horse2zebra.gif' align="right" width=384>
@@ -128,10 +187,10 @@ ZeroCostDL4Mic Colab notebook: [CycleGAN](https://colab.research.google.com/gith
 ### Installation
 
 - Clone this repo:
-```bash
+​```bash
 git clone https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix
 cd pytorch-CycleGAN-and-pix2pix
-```
+ ```
 
 - Install [PyTorch](http://pytorch.org) and 0.4+ and other dependencies (e.g., torchvision, [visdom](https://github.com/facebookresearch/visdom) and [dominate](https://github.com/Knio/dominate)).
   - For pip users, please type the command `pip install -r requirements.txt`.
@@ -141,9 +200,9 @@ cd pytorch-CycleGAN-and-pix2pix
 
 ### CycleGAN train/test
 - Download a CycleGAN dataset (e.g. maps):
-```bash
+​```bash
 bash ./datasets/download_cyclegan_dataset.sh maps
-```
+ ```
 - To view training results and loss plots, run `python -m visdom.server` and click the URL http://localhost:8097.
 - Train a model:
 ```bash

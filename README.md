@@ -40,8 +40,8 @@ Footage was sourced from Pexels.com & [This Video from GTA Series Videos on Yout
 
 # Util Apps
 - copyFilesToDirectory.py
-  - Copy files in a directory to another, with shotcount and extension options.
-  - ```python "M:\Projects\GAN\VG2City\01-Working\28-JJ\99-Code\gtav2city-pytorch-CycleGAN\pytorch-CycleGAN-and-pix2pix\copyFilesToDirectory.py" --dataroot C:\Temp2\crops --output C:\Tempout --extension png --shot_count 24```
+  - Copy files in a directory to another, with shot_count, random_shot and extension options.
+  - ```python copyFilesToDirectory.py --dataroot C:\Temp2\crops --output C:\Tempout --extension png --shot_count 24 --random_shot```
 
 # Youtube Download Template
 

@@ -38,6 +38,11 @@ Footage was sourced from Pexels.com & [This Video from GTA Series Videos on Yout
 - [ytdl-org/youtube-dl: Command-line program to download videos from YouTube.com and other video sites (github.com)](https://github.com/ytdl-org/youtube-dl)
 - [vltmedia/FrameClipper: Clip frames from videos for use in compositing, editing, datasets and other needs. (github.com)](https://github.com/vltmedia/FrameClipper)
 
+# Util Apps
+- copyFilesToDirectory.py
+  - Copy files in a directory to another, with shotcount and extension options.
+  - ```python "M:\Projects\GAN\VG2City\01-Working\28-JJ\99-Code\gtav2city-pytorch-CycleGAN\pytorch-CycleGAN-and-pix2pix\copyFilesToDirectory.py" --dataroot C:\Temp2\crops --output C:\Tempout --extension png --shot_count 24```
+
 # Youtube Download Template
 
 [ytdl-org/youtube-dl: Command-line program to download videos from YouTube.com and other video sites (github.com)](https://github.com/ytdl-org/youtube-dl)

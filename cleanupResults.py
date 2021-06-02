@@ -10,6 +10,24 @@ from pathlib import Path
 
 
 
+def GetFiles(directory):
+    files = glob.glob(directory+'/*.png')
+    img_array = []
+    temp_array = []
+    cleaned_array = []
+    for k in files:
+    
+        img_array.append(k.split("_fake")[0])
+        outpath = GetOutputFolder(k,'fake') +'/'+os.path.basename(k.split("_fake")[0]+'_fake.png')
+        # print(outpath)
+        dictt = {"filepath" : k, "basename" : k.split("_fake")[0], "updatedname" :  outpath, "exportdirectory" :  GetOutputFolder(k,'fake')}
+        if k.split("_fake")[0] not in temp_array:
+            temp_array.append(k.split("_fake")[0])
+            cleaned_array.append(dictt)
+        # Path('/content/pytorch-CycleGAN-and-pix2pix/results/gtavc2city/test_latest').mkdir(parents=True, exist_ok=True)
+    return cleaned_array
+
+
 def GetFakeFiles(directory):
     files = glob.glob(directory+'/*fake*.png')
     img_array = []
@@ -73,24 +91,29 @@ def WriteConcacts(filearray):
 
 def main():
     directory = sys.argv[1]
+    files = glob.glob(directory+'/*.png')
+    
     # directory = '/content/pytorch-CycleGAN-and-pix2pix/results/gtavc2city/test_latest/images'
     fakefiles = GetFakeFiles(directory)
     realfiles = GetRealFiles(directory)
-    # if os.path.exists(os.path.dirname(realfiles[0]['exportdirectory'])):
-    #     shutil.rmtree(os.path.dirname(realfiles[0]['exportdirectory']))
-    # if os.path.exists(os.path.dirname(fakefiles[0]['exportdirectory'])):
-    #     shutil.rmtree(os.path.dirname(fakefiles[0]['exportdirectory']))
-    CopyFiles(fakefiles)
-    CopyFiles(realfiles)
-    # WriteConcacts(fakefiles)
-    # WriteConcacts(realfiles)
-    
-    print("Finished Cleaning Files ")
-    print("Real directory: ", os.path.dirname(realfiles[0]['exportdirectory']))
-    print("Fake directory : ", os.path.dirname(fakefiles[0]['exportdirectory']))
+    if fakefiles != 0:
+        # if os.path.exists(os.path.dirname(realfiles[0]['exportdirectory'])):
+        #     shutil.rmtree(os.path.dirname(realfiles[0]['exportdirectory']))
+        # if os.path.exists(os.path.dirname(fakefiles[0]['exportdirectory'])):
+        #     shutil.rmtree(os.path.dirname(fakefiles[0]['exportdirectory']))
+        CopyFiles(fakefiles)
+        CopyFiles(realfiles)
+        # WriteConcacts(fakefiles)
+        # WriteConcacts(realfiles)
+        
+        print("Finished Cleaning Files ")
+        print("Real directory: ", os.path.dirname(realfiles[0]['exportdirectory']))
+        print("Fake directory : ", os.path.dirname(fakefiles[0]['exportdirectory']))
+    else:
+        
     # print(fakefiles[1])
     # print(realfiles[1])
     # print(len(fakefiles))
     # print(len(realfiles))
-    
-main()
+if __name__ == '__main__':    
+    main()

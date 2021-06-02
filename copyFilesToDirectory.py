@@ -52,9 +52,9 @@ class CopyFilesToDirectory:
                 iteration = self.currentiteration + 1
                 self.currentiteration= iteration
                 
-        else:
-            remedialiteration = self.currentiteration - 1
-            self.currentiteration= remedialiteration
+        # else:
+            # remedialiteration = self.currentiteration - 1
+            # self.currentiteration= remedialiteration
             
 
     

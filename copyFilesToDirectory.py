@@ -24,18 +24,33 @@ class CopyFilesToDirectory:
         self.files = glob.glob(self.opt.dataroot+'/*.'+self.opt.extension)
         self.copied = []
         self.currentindex = 0
+        self.ispossible = self.opt.shot_count < len(self.files)
+        
+        if not self.ispossible:
+            self.ShowNotPossibleError()
         print(self.opt)
         
+    def ShowNotPossibleError(self):
+        print("Error (01002): NOT ENOUGH FILES IN FOLDER TO MATCH REQUESTED SHOT COUNT!")
+        
+    def CheckIfPossible(self):
+        return self.opt.shot_count < len(self.files)
+    
     def RemoveRandomFromFiles(self):
         # randomm = randrange(len(self.files) - 1)
-        print("files length : ",len(self.files))
         
         randomm = random.randint(0,len(self.files) - 1)
         self.files.pop(randomm)
-        print(randomm)
         iteration = self.currentiteration + 1
         self.currentiteration= iteration
         
+    def CopyFilesArray(self):
+        for filee in self.files:
+            if not self.CheckFileExists(filee):
+                outputpath = self.GetOutputPath(filee)
+                shutil.copy(filee, outputpath)
+                
+            
     def GetOutputPath(self, file):
         basee = os.path.basename(file)
         outputpath = os.path.join(self.opt.output, basee)
@@ -68,14 +83,17 @@ class CopyFilesToDirectory:
 
     
     def ProcessFiless(self):
-        self.currentiteration = 0
-        while self.currentiteration < self.shoutCount:
-        # for self.currentiteration in range(0, self.shoutCount):
-            print("-----------------------------------------------------------------------------------------------------------")
-            print("Iteration : ", self.currentiteration)
-            print("-----------------------------------------------------------------------------------------------------------")
-            self.RemoveRandomFromFiles()
-            # self.ProcessCurrentFile()
+        if self.CheckIfPossible():
+            self.currentiteration = 0
+            while self.currentiteration < self.shoutCount:
+            # for self.currentiteration in range(0, self.shoutCount):
+                print("-----------------------------------------------------------------------------------------------------------")
+                print("Iteration : ", self.currentiteration)
+                print("-----------------------------------------------------------------------------------------------------------")
+                # self.RemoveRandomFromFiles()
+                self.ProcessCurrentFile()
+        else:
+            self.ShowNotPossibleError()
 
 if __name__ == '__main__':
     cop = CopyFilesToDirectory()

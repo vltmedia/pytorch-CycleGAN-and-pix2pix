@@ -27,10 +27,13 @@ class CopyFilesToDirectory:
         print(self.opt)
         
         
-    def CheckFileExists(self, file):
+    def GetOutputPath(self, file):
         basee = os.path.basename(file)
         outputpath = os.path.join(self.opt.output, basee)
-        print(basee)
+        return outputpath
+        
+    def CheckFileExists(self, file):
+        outputpath = self.GetOutputPath(file)
         return os.path.exists(outputpath)
 
     def ProcessCurrentFile(self):
@@ -41,9 +44,11 @@ class CopyFilesToDirectory:
         if randomm not in self.copied:
             self.copied.append(randomm)
             if not self.CheckFileExists(self.files[randomm]):
+                outputpath = self.GetOutputPath(self.files[randomm])
             # print("File Exists : ",self.files[randomm], self.CheckFileExists(self.files[randomm]))
                 print("Copying | ",self.files[randomm])
-                shutil.copy(self.files[randomm], self.outputDirectory)
+                print("Output | ",outputpath)
+                shutil.copy(self.files[randomm], outputpath)
         else:
             self.ProcessCurrentFile()
 

@@ -13,9 +13,7 @@ from options.util_options import UtilOptions
 class CopyFilesToDirectory:
    
     def __init__(self):
-        print("init 1")
         self.opt = UtilOptions().parse()
-        print("init 2")
         
         self.inputDirectory = self.opt.dataroot
         self.outputDirectory = self.opt.output

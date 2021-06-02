@@ -6,7 +6,7 @@ import shutil
 import glob
 import os
 from random import randrange
-
+import random
 from options.util_options import UtilOptions
 
 
@@ -27,7 +27,8 @@ class CopyFilesToDirectory:
         print(self.opt)
         
     def RemoveRandomFromFiles(self):
-        randomm = randrange(len(self.files) - 1)
+        # randomm = randrange(len(self.files) - 1)
+        randomm = random.randint(0,len(self.files) - 1)
         self.files.pop(randomm)
         print(randomm)
         iteration = self.currentiteration + 1

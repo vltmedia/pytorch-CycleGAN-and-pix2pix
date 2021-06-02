@@ -26,6 +26,11 @@ class CopyFilesToDirectory:
         self.currentindex = 0
         print(self.opt)
         
+    def RemoveRandomFromFiles(self):
+        randomm = randrange(len(self.files) - 1)
+        self.files.pop(randomm)
+        iteration = self.currentiteration + 1
+        self.currentiteration= iteration
         
     def GetOutputPath(self, file):
         basee = os.path.basename(file)
@@ -65,7 +70,8 @@ class CopyFilesToDirectory:
             print("-----------------------------------------------------------------------------------------------------------")
             print("Iteration : ", self.currentiteration)
             print("-----------------------------------------------------------------------------------------------------------")
-            self.ProcessCurrentFile()
+            self.RemoveRandomFromFiles()
+            # self.ProcessCurrentFile()
 
 if __name__ == '__main__':
     cop = CopyFilesToDirectory()

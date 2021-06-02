@@ -29,6 +29,7 @@ class CopyFilesToDirectory:
     def RemoveRandomFromFiles(self):
         randomm = randrange(len(self.files) - 1)
         self.files.pop(randomm)
+        print(randomm)
         iteration = self.currentiteration + 1
         self.currentiteration= iteration
         

@@ -50,11 +50,13 @@ class CopyFilesToDirectory:
                 print("Output | ",outputpath)
                 shutil.copy(self.files[randomm], outputpath)
         else:
-            self.ProcessCurrentFile()
+            remedialiteration = self.currentiteration - 1
+            self.currentiteration= remedialiteration
+            
 
     
     def ProcessFiless(self):
-        for ran in range(0, self.shoutCount):
+        for self.currentiteration in range(0, self.shoutCount):
             self.ProcessCurrentFile()
 
 if __name__ == '__main__':

@@ -28,6 +28,8 @@ class CopyFilesToDirectory:
         
     def RemoveRandomFromFiles(self):
         # randomm = randrange(len(self.files) - 1)
+        print("files length : ",len(self.files))
+        
         randomm = random.randint(0,len(self.files) - 1)
         self.files.pop(randomm)
         print(randomm)

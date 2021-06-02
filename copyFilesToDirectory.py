@@ -31,7 +31,7 @@ class CopyFilesToDirectory:
         print(self.opt)
         
     def ShowNotPossibleError(self):
-        print("Error (01002): NOT ENOUGH FILES IN FOLDER TO MATCH REQUESTED SHOT COUNT! TURN YOUR SHOT COUNT DOWN! " + str(self.opt.shot_count) +" > "+  str(len(self.files)) )
+        print("Error (01002): NOT ENOUGH FILES IN FOLDER TO MATCH REQUESTED SHOT COUNT! TURN YOUR SHOT COUNT DOWN! Shot Count:" + str(self.opt.shot_count) +" > Files Count:"+  str(len(self.files)) )
         
     def CheckIfPossible(self):
         return self.opt.shot_count < len(self.files)

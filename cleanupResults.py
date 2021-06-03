@@ -110,7 +110,7 @@ def main():
         print("Real directory: ", os.path.dirname(realfiles[0]['exportdirectory']))
         print("Fake directory : ", os.path.dirname(fakefiles[0]['exportdirectory']))
     else:
-        
+        print("(Error: 01120) No Fake Files were generated or found")
     # print(fakefiles[1])
     # print(realfiles[1])
     # print(len(fakefiles))
